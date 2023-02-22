@@ -1,6 +1,7 @@
 package com.ajc.kata4;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.List;
 
@@ -35,7 +36,11 @@ class SearchFunctionalityTest {
 	    @DisplayName("Should return 2 cities when city name starts with Va")
 	    void testForCityNameLengthEqualsToTwo() {
 	        List<String> cities = searchFunctionality.searchFunctionality("Va");
-	        assertEquals(2, cities.size());   
+	        assertEquals(2, cities.size());  
+	        
+	        assertTrue(cities.contains("Valencia"));
+	        assertTrue(cities.contains("Vancouver"));
+	        
 	    }
 	
 

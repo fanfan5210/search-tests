@@ -25,10 +25,9 @@ public class SearchFunctionality {
 			
 			for(String s: listCities) {
 				if(s.contains(textSearch)) {
-					listOfcities.add(textSearch);
+					listOfcities.add(s);
 				}
-			}
-			 
+			} 
 			return listOfcities;
 	    }
 		
