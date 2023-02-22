@@ -52,5 +52,16 @@ class SearchFunctionalityTest {
 		assertTrue(cities.contains("Vancouver"));
 
 	}
+	
+	@Test
+	@DisplayName("Should work also when the search text is just a part of a city name")
+	void testSearchCitiesNameWithTextSearchPartOfCityName() {
+		List<String> cities = searchFunctionality.searchFunctionality("ape");
+		assertEquals(1, cities.size());
+
+		assertTrue(cities.contains("Budapest"));
+		
+
+	}
 
 }
