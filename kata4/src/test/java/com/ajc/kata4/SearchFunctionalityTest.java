@@ -60,7 +60,14 @@ class SearchFunctionalityTest {
 		assertEquals(1, cities.size());
 
 		assertTrue(cities.contains("Budapest"));
-		
+	
+	}
+	
+	@Test
+	@DisplayName("Should return all the city names when the search text is a “*” ")
+	void testReturnAllCitiesWithSearchTextIsAsterisk() {
+		List<String> cities = searchFunctionality.searchFunctionality("*");
+		assertEquals(16, cities.size());
 
 	}
 
