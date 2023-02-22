@@ -31,17 +31,26 @@ class SearchFunctionalityTest {
         assertEquals(0, cities1.size());
     }
 
+	@Test
+	@DisplayName("Should return 2 cities when city name starts with Va")
+	void testSearchCitiesWithSearchTextEqualsTwo() {
+		List<String> cities = searchFunctionality.searchFunctionality("Va");
+		assertEquals(2, cities.size());
+
+		assertTrue(cities.contains("Valencia"));
+		assertTrue(cities.contains("Vancouver"));
+
+	}
 	
-	 @Test
-	    @DisplayName("Should return 2 cities when city name starts with Va")
-	    void testForCityNameLengthEqualsToTwo() {
-	        List<String> cities = searchFunctionality.searchFunctionality("Va");
-	        assertEquals(2, cities.size());  
-	        
-	        assertTrue(cities.contains("Valencia"));
-	        assertTrue(cities.contains("Vancouver"));
-	        
-	    }
-	
+	@Test
+	@DisplayName("Should search cities with case insensitive return 2 cities when city name starts with Va")
+	void testSearchCitiesNameWithCaseInsensitive() {
+		List<String> cities = searchFunctionality.searchFunctionality("va");
+		assertEquals(2, cities.size());
+
+		assertTrue(cities.contains("Valencia"));
+		assertTrue(cities.contains("Vancouver"));
+
+	}
 
 }
