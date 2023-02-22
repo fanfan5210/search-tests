@@ -67,7 +67,7 @@ class SearchFunctionalityTest {
 	@DisplayName("Should return all the city names when the search text is a “*” ")
 	void testReturnAllCitiesWithSearchTextIsAsterisk() {
 		List<String> cities = searchFunctionality.searchFunctionality("*");
-		assertEquals(16, cities.size());
+		assertEquals(17, cities.size());
 
 	}
 

@@ -30,8 +30,8 @@ public class SearchFunctionality {
 			} 
 			return listOfcities;
 	    }
-		
 		return listCities;
+		
 		
 	}
 
