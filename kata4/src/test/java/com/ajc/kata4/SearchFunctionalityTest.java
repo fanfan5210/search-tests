@@ -43,7 +43,7 @@ class SearchFunctionalityTest {
 	}
 	
 	@Test
-	@DisplayName("Should search cities with case insensitive return 2 cities when city name starts with Va")
+	@DisplayName("Should search cities with case insensitive return 2 cities when city name starts with va")
 	void testSearchCitiesNameWithCaseInsensitive() {
 		List<String> cities = searchFunctionality.searchFunctionality("va");
 		assertEquals(2, cities.size());

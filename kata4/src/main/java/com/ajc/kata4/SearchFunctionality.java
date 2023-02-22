@@ -24,7 +24,7 @@ public class SearchFunctionality {
 			List<String> listOfcities = new ArrayList<>();
 			
 			for(String s: listCities) {
-				if(s.contains(textSearch)) {
+				if(s.toLowerCase().contains(textSearch.toLowerCase())) {
 					listOfcities.add(s);
 				}
 			} 
