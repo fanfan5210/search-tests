@@ -25,6 +25,9 @@ class SearchFunctionalityTest {
     void testSearchTextLengthLessThanTwo() {
 		List<String> cities = searchFunctionality.searchFunctionality("a");
         assertEquals(0, cities.size());
+        
+        List<String> cities1 = searchFunctionality.searchFunctionality("");
+        assertEquals(0, cities1.size());
     }
 
 	
