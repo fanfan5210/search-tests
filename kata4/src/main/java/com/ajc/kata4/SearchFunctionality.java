@@ -1,18 +1,26 @@
 package com.ajc.kata4;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class SearchFunctionality {
 	
-	public String [] empty = {};  
-	public String [] cities = {"Paris", "Budapest", "Skopje", "Rotterdam", 
+	public static final int MIN_LENGHTH_SEARCHTEXT = 2;
+	public String[] cities = {"Paris", "Budapest", "Skopje", "Rotterdam", 
 	        "Valencia", "Vancouver", "Amsterdam", "Vienna", 
 	        "Sydney", "New York City", "London", "Bangkok", 
 	        "Hong Kong", "Dubai", "Rome", "Istanbul"};
 	
-	public static final int MIN_SEARCHTEXT = 2;
+	List<String> listCities = Arrays.asList(cities);
 	
-	
-	public  String[] searchCities(String a) {
-		return 0;
+		
+	public  List<String> searchFunctionality(String textSearch) {
+//		if (textSearch.length() < MIN_LENGHTH_SEARCHTEXT) { 
+//			List<String> listEmpty = new ArrayList<>();
+//			return listEmpty;
+//		}
+		return "";
 	}
 
 }
