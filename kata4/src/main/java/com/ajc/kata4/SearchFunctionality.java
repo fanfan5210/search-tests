@@ -25,10 +25,10 @@ public class SearchFunctionality {
 			return listEmpty;
 		}
 		
-		return 	serachCities (listCities,textSearch);
+		return 	searchCities(listCities, textSearch);
 	}
 	
-	public  List<String> serachCities (List<String> listCities, String word){
+	public  List<String> searchCities(List<String> listCities, String word){
 		
 		List<String> listOfcities= new ArrayList<>();
 		
