@@ -16,11 +16,11 @@ public class SearchFunctionality {
 	
 		
 	public  List<String> searchFunctionality(String textSearch) {
-//		if (textSearch.length() < MIN_LENGHTH_SEARCHTEXT) { 
-//			List<String> listEmpty = new ArrayList<>();
-//			return listEmpty;
-//		}
-		return "";
+		if (textSearch.length() < MIN_LENGHTH_SEARCHTEXT) { 
+			List<String> listEmpty = new ArrayList<>();
+			return listEmpty;
+		}
+		return listCities;
 	}
 
 }
