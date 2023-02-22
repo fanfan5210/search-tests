@@ -7,6 +7,7 @@ import java.util.List;
 public class SearchFunctionality {
 	
 	public static final int MIN_LENGHTH_SEARCHTEXT = 2;
+	
 	public String[] cities = {"Paris", "Budapest", "Skopje", "Rotterdam", 
 	        "Valencia", "Vancouver", "Amsterdam", "Vienna", 
 	        "Sydney", "New York City", "London", "Bangkok", 
@@ -17,25 +18,27 @@ public class SearchFunctionality {
 		
 	public  List<String> searchFunctionality(String textSearch) {
 		
-		if(textSearch.equals("*")) {
-		    	return listCities;
-		}else if (textSearch.length() < MIN_LENGHTH_SEARCHTEXT) { 
+		if(textSearch.equals("*")) 
+		    return listCities;
+		if (textSearch.length() < MIN_LENGHTH_SEARCHTEXT) { 
 			List<String> listEmpty = new ArrayList<>();
 			return listEmpty;
-		}else if(textSearch.length() >= MIN_LENGHTH_SEARCHTEXT){
-			List<String> listOfcities = new ArrayList<>();
-			
-			for(String s: listCities) {
-				if(s.toLowerCase().contains(textSearch.toLowerCase())) {
-					listOfcities.add(s);
-				}
-			}
-			
-			return listOfcities;
-	    }
-		return listCities;
+		}
 		
-		
+		return 	serachCities (listCities,textSearch);
 	}
+	
+	public  List<String> serachCities (List<String> listCities, String word){
+		
+		List<String> listOfcities= new ArrayList<>();
+		
+		for(String s: listCities) {
+			if(s.toLowerCase().contains(word.toLowerCase())) {
+				listOfcities.add(s);
+			}
+		}
+		return listOfcities;
+	}
+	
 
 }
