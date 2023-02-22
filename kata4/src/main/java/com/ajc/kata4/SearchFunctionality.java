@@ -17,7 +17,9 @@ public class SearchFunctionality {
 		
 	public  List<String> searchFunctionality(String textSearch) {
 		
-		if (textSearch.length() < MIN_LENGHTH_SEARCHTEXT) { 
+		if(textSearch.equals("*")) {
+		    	return listCities;
+		}else if (textSearch.length() < MIN_LENGHTH_SEARCHTEXT) { 
 			List<String> listEmpty = new ArrayList<>();
 			return listEmpty;
 		}else if(textSearch.length() >= MIN_LENGHTH_SEARCHTEXT){
@@ -27,7 +29,8 @@ public class SearchFunctionality {
 				if(s.toLowerCase().contains(textSearch.toLowerCase())) {
 					listOfcities.add(s);
 				}
-			} 
+			}
+			
 			return listOfcities;
 	    }
 		return listCities;
