@@ -20,7 +20,7 @@ public class SearchFunctionality {
 		if (textSearch.length() < MIN_LENGHTH_SEARCHTEXT) { 
 			List<String> listEmpty = new ArrayList<>();
 			return listEmpty;
-		}else if(textSearch.length() == MIN_LENGHTH_SEARCHTEXT){
+		}else if(textSearch.length() >= MIN_LENGHTH_SEARCHTEXT){
 			List<String> listOfcities = new ArrayList<>();
 			
 			for(String s: listCities) {
