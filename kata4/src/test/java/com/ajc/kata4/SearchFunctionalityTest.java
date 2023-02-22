@@ -35,9 +35,7 @@ class SearchFunctionalityTest {
 	    @DisplayName("Should return 2 cities when city name starts with Va")
 	    void testForCityNameLengthEqualsToTwo() {
 	        List<String> cities = searchFunctionality.searchFunctionality("Va");
-	        
-	        assertEquals(2, cities.size());
-	       
+	        assertEquals(2, cities.size());   
 	    }
 	
 

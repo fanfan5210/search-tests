@@ -16,11 +16,22 @@ public class SearchFunctionality {
 	
 		
 	public  List<String> searchFunctionality(String textSearch) {
+		
 		if (textSearch.length() < MIN_LENGHTH_SEARCHTEXT) { 
 			List<String> listEmpty = new ArrayList<>();
 			return listEmpty;
-		}
-		return listCities;
+		}else {
+			List<String> listOfcities = new ArrayList<>();
+			
+			for(String s: listCities) {
+				if(s.contains(textSearch)) {
+					listOfcities.add(textSearch);
+				}
+			}
+			 
+			return listOfcities;
+	    }
+		
 	}
 
 }
